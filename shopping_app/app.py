@@ -13,6 +13,20 @@ st.set_page_config(
     layout="wide"
 )
 
+# PWA - Manifesto e Service Worker
+st.markdown("""
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0f766e">
+    <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service_worker.js');
+      });
+    }
+    </script>
+    """, unsafe_allow_html=True)
+
 # Estilos CSS para melhor visualização
 st.markdown("""
     <style>
