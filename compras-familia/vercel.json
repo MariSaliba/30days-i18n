@@ -1,32 +1,13 @@
 {
-  "rewrites": [
+  "version": 2,
+  "builds": [
+    { "src": "vite.config.js", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
+  ],
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ],
-  "headers": [
-    {
-      "source": "/service-worker.js",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        },
-        {
-          "key": "Service-Worker-Allowed",
-          "value": "/"
-        }
-      ]
-    },
-    {
-      "source": "/manifest.json",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/manifest+json"
-        }
-      ]
-    }
-  ]
+  "cleanUrls": true
 }
