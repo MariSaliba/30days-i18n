@@ -5,7 +5,7 @@
   "display": "standalone",
   "background_color": "#f7f3ed",
   "theme_color": "#73918a",
-  "description": "Aplicativo de compras e gestão familiar criado com carinho para quem cuida.",
+  "description": "App para família e cuidadoras gerenciarem compras, despesas e divisão entre irmãos.",
   "icons": [
     {
       "src": "/icons/icon-192.png",
